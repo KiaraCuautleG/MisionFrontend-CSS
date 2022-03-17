@@ -1,0 +1,97 @@
+*{
+    font-family: 'Fredoka', sans-serif;
+    margin: 0;
+}
+.containerName{
+    padding: 30px;
+}
+.name{
+    color:  #1f57b3 ;
+    font-size: 30px;
+    font-weight: bold;
+}
+header{
+    display: flex;
+    flex-direction: column;
+}
+header nav{
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    /*left: -100%;*/   
+}
+header nav ul li{
+    display: block; /*Abarcara todo el ancho de li*/
+    float: none;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    color:  #696a6d ;
+    height: 40px;
+    margin: 20px 0px;
+    font-weight: 600;
+}
+.menu_bar{
+    display: block;
+    width: 100%;
+    background: #cccccc;
+}
+.menu_bar .bt-menu{
+    display: block; /*Para que abarque todo*/
+    padding: 20px;
+    background: #1f57b3;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    font-size: 25px;
+    box-sizing: border-box;
+}
+
+.button{
+    background: #1f57b3;
+    height: 45px;
+    width: 150px;
+    color: #ffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 0px 20px;
+}
+@media screen and (min-width:768px){
+    .menu_bar{
+        display: none;
+    }
+    header{
+        display: grid;
+        padding: 50px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header nav{
+        width: 100%;
+        display: flex;
+        background: #ffff;
+        grid-column: 2/3;
+        width: 100%;
+        
+    }
+    .containerName{
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+    header nav ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+    }   
+    header nav ul li{
+        /* float: left; *//*Se quita porque habrá menus desplegables*/
+        position: relative;
+        margin: 10px 10px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    header nav ul li{
+        margin: 10px 30px;
+    }
+}
